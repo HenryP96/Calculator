@@ -30,6 +30,7 @@ namespace Calculator
         public void print()
         {
             Console.WriteLine("Den danske ");
+            Console.WriteLine("JS");
         }
 
     }

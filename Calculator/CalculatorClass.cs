@@ -26,5 +26,11 @@ namespace Calculator
         {
             return Math.Pow(a, b);
         }
+
+        public void print()
+        {
+            Console.WriteLine("Den danske ");
+        }
+
     }
 }

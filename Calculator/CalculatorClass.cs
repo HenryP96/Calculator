@@ -37,6 +37,12 @@ namespace Calculator
         {
             return dividend/divisor;
         }
+
+        public double Accumulator
+        {
+            get; private set;
+        }
+
     }
 }
 

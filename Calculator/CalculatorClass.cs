@@ -43,6 +43,12 @@ namespace Calculator
             get; private set;
         }
 
+
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
+
     }
 }
 

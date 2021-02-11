@@ -33,16 +33,13 @@ namespace Calculator
 
         public double Divide(double dividend, double divisor)
         {
-            try
-            {
-                Accumulator = dividend / divisor;
-                return dividend / divisor;
-            }
-
-            catch (DivideByZeroException )
+            if(divisor==0)
             {
                 throw new DivideByZeroException("Error: 'Divide by zero'");
             }
+
+            Accumulator = dividend / divisor;
+            return dividend / divisor;
         }
 
         public double Accumulator

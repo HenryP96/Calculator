@@ -169,9 +169,8 @@ namespace Calculator.Unit.Test
         [Test]
         public void AccumulatorSubtractTest()
         {
-            double result = uut.Subtract(20, 5);
             //Act
-            double result = uut.Add(20, 5);
+            double result = uut.Subtract(20, 5);
             //Assert
             Assert.That(result, Is.EqualTo(uut.Accumulator));
         }
@@ -180,7 +179,6 @@ namespace Calculator.Unit.Test
         public void AccumulatorMultiplyTest()
         {
             //Act
-            double result = uut.Add(5, 5);
             double result = uut.Multiply(5, 5);
             //Assert
             Assert.That(result, Is.EqualTo(uut.Accumulator));
@@ -189,9 +187,8 @@ namespace Calculator.Unit.Test
         [Test]
         public void AccumulatorPowerTest()
         {
-            double result = uut.Add(5, 5);
+            //Act
             double result = uut.Power(5, 5);
-            double result = uut.Add(5, 5);
             //Assert
             Assert.That(result, Is.EqualTo(uut.Accumulator));
         }
@@ -199,10 +196,9 @@ namespace Calculator.Unit.Test
         [Test]
         public void AccumulatorDivideTest()
         {
-            double result = uut.Add(20, 5);
-            double result = uut.Add(20, 5);
-            //Assert
+            //Act
             double result = uut.Divide(20, 5);
+            //Assert
             Assert.That(result, Is.EqualTo(uut.Accumulator));
         }
 

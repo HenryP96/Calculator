@@ -30,7 +30,6 @@ namespace Calculator.Unit.Test
             double result = uut.Add(5, 0);
             Assert.That(result,Is.EqualTo(5));
         }
-
         public void AddMinusTest()
         {
             double result = uut.Add(5, -7);
@@ -91,6 +90,13 @@ namespace Calculator.Unit.Test
             Assert.That(result, Is.EqualTo(0.04));
         }
 
+        [Test]
+        public void AccumulatorTest()
+        {
+            double result = uut.Accumulator;
+            result = 6;
+            Assert.That(result,Is.EqualTo(6));
+        }
 
 
     }

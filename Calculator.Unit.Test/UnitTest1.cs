@@ -285,43 +285,36 @@ namespace Calculator.Unit.Test
             Assert.That(result, Is.EqualTo(17));
         }
 
+        [Test]
+        public void OverloadedDivideTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Divide(2);
+            //Assert
+            Assert.That(result, Is.EqualTo(5));
+        }
 
+        [Test]
+        public void OverloadedDivideByZeroTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act + Assert
+            Assert.That(() => uut.Divide(0), Throws.TypeOf<System.DivideByZeroException>());
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        [Test]
+        public void OverloadedDivideMinusTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Divide(-5);
+            //Assert
+            Assert.That(result, Is.EqualTo(-2));
+        }
 
         [Test]
         public void OverloadedPowerTest()

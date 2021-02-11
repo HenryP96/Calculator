@@ -138,7 +138,7 @@ namespace Calculator.Unit.Test
         public void PowerMinusFirstTest()
         {
             double result = uut.Power(-2, 5);
-            Assert.That(result, Is.EqualTo(32));
+            Assert.That(result, Is.EqualTo(-32));
         }
         [Test]
         public void PowerMinusSecondTest()

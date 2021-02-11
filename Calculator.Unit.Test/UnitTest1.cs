@@ -70,22 +70,8 @@ namespace Calculator.Unit.Test
         [Test]
         public void MultiplyTest()
         {
-            //Arrange
-            //var uut = new CalculatorClass();
-            //Act
             double result = uut.Multiply(8, 5);
-            //Assert
             Assert.That(result, Is.EqualTo(40));
-        }
-
-
-        [Test]
-        public void DivideTest()
-        {
-            //Act
-            double result = uut.Divide(10, 5);
-            //Assert
-            Assert.That(result, Is.EqualTo(2));
         }
 
         [Test]
@@ -102,6 +88,27 @@ namespace Calculator.Unit.Test
             double result = uut.Divide(20, -5);
             //Assert
             Assert.That(result, Is.EqualTo(-4));
+        }
+
+        [Test]
+        public void MultiplyZeroTest()
+        {
+            double result = uut.Multiply(8, 0);
+            Assert.That(result, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void MultiplyMinusFirstTest()
+        {
+            double result = uut.Multiply(8, -5);
+            Assert.That(result, Is.EqualTo(-40));
+        }
+
+        [Test]
+        public void MultiplyMinusSecondTest()
+        {
+            double result = uut.Multiply(-5, -5);
+            Assert.That(result, Is.EqualTo(25));
         }
 
         [Test]

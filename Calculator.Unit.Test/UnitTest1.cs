@@ -75,22 +75,6 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-        public void DivideByZeroTest()
-        {
-            //Act + Assert
-            Assert.That(() => uut.Divide(10, 0), Throws.TypeOf<System.DivideByZeroException>());
-        }
-
-        [Test]
-        public void DivideMinusTest()
-        {
-            //Act
-            double result = uut.Divide(20, -5);
-            //Assert
-            Assert.That(result, Is.EqualTo(-4));
-        }
-
-        [Test]
         public void MultiplyZeroTest()
         {
             double result = uut.Multiply(8, 0);
@@ -110,6 +94,23 @@ namespace Calculator.Unit.Test
             double result = uut.Multiply(-5, -5);
             Assert.That(result, Is.EqualTo(25));
         }
+
+        [Test]
+        public void DivideByZeroTest()
+        {
+            //Act + Assert
+            Assert.That(() => uut.Divide(10, 0), Throws.TypeOf<System.DivideByZeroException>());
+        }
+
+        [Test]
+        public void DivideMinusTest()
+        {
+            //Act
+            double result = uut.Divide(20, -5);
+            //Assert
+            Assert.That(result, Is.EqualTo(-4));
+        }
+
 
         [Test]
         public void PowerTest()
@@ -219,5 +220,14 @@ namespace Calculator.Unit.Test
             Assert.That(result, Is.EqualTo(-7));
         }
 
+
+        [Test]
+        public void ClearTest()
+        {
+            uut.Add(20, 5);
+            Assert.That(uut.Accumulator, Is.EqualTo(25));
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
     }
 }

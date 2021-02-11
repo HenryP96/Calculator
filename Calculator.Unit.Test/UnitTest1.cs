@@ -95,11 +95,23 @@ namespace Calculator.Unit.Test
             Assert.That(result, Is.EqualTo(25));
         }
 
+
+        [Test]
+        public void DivideTest()
+        {
+            //Act
+            double result = uut.Divide(10, 5);
+            //Assert
+            Assert.That(result, Is.EqualTo(2));
+        }
+
         [Test]
         public void DivideByZeroTest()
         {
-            //Act + Assert
-            Assert.That(() => uut.Divide(10, 0), Throws.TypeOf<System.DivideByZeroException>());
+            //Act
+            double result = uut.Divide(20, -5);
+            //Assert
+            Assert.That(result, Is.EqualTo(-4));
         }
 
         [Test]

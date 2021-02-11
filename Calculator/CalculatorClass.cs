@@ -47,6 +47,40 @@ namespace Calculator
             Accumulator = 0;
         }
 
+
+        //OVERLOADS
+        public double Add(double addend)
+        {
+            return Accumulator += addend;
+        }
+
+        public double Subtract(double subtractor)
+        {
+            return Accumulator -= subtractor;
+        }
+
+        public double Multiply(double multiplier)
+        {
+            return Accumulator *= multiplier;
+        }
+
+        public double Divide(double divisor)
+        {
+            try
+            {
+                return Accumulator /= divisor;
+            }
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine("Could not divide by zero");
+                return 0;
+            }
+        }
+
+        public double Power(double exponent)
+        {
+            return Accumulator = Math.Pow(Accumulator, exponent);
+        }
     }
 }
 

@@ -39,10 +39,9 @@ namespace Calculator
                 return dividend / divisor;
             }
 
-            catch (DivideByZeroException)
+            catch (DivideByZeroException )
             {
-                Console.WriteLine("Error: 'Divide by zero'");
-                return 0;
+                throw new DivideByZeroException("Error: 'Divide by zero'");
             }
         }
 

@@ -147,13 +147,39 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
-        public void AccumulatorTest()
+        public void AccumulatorAddTest()
         {
-            double result = uut.Accumulator;
-            result = 6;
-            Assert.That(result,Is.EqualTo(6));
+            double result = uut.Add(5, 5);
+            Assert.That(result,Is.EqualTo(uut.Accumulator));
         }
 
+        [Test]
+        public void AccumulatorSubtractTest()
+        {
+            double result = uut.Add(20, 5);
+            Assert.That(result, Is.EqualTo(uut.Accumulator));
+        }
+
+        [Test]
+        public void AccumulatorMultiplyTest()
+        {
+            double result = uut.Add(5, 5);
+            Assert.That(result, Is.EqualTo(uut.Accumulator));
+        }
+
+        [Test]
+        public void AccumulatorPowerTest()
+        {
+            double result = uut.Add(5, 5);
+            Assert.That(result, Is.EqualTo(uut.Accumulator));
+        }
+
+        [Test]
+        public void AccumulatorDivideTest()
+        {
+            double result = uut.Add(20, 5);
+            Assert.That(result, Is.EqualTo(uut.Accumulator));
+        }
 
     }
 }

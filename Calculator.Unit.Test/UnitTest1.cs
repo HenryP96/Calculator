@@ -141,7 +141,5 @@ namespace Calculator.Unit.Test
             Assert.That(result, Is.EqualTo(0.04));
         }
 
-
-
     }
 }

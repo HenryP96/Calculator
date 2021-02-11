@@ -224,6 +224,22 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void ClearZeroTest()
+        {
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void ClearMinusTest()
+        {
+            uut.Add(-5);
+            Assert.That(uut.Accumulator, Is.EqualTo(-5));
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
         public void OverloadedAddTest()
         {
             //Arrange

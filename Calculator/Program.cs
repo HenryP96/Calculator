@@ -12,7 +12,7 @@ namespace Calculator
             Console.WriteLine($"12-2 = {calc.Subtract(12, 2)}");
             Console.WriteLine($"4*5 = {calc.Multiply(4, 5)}");
             Console.WriteLine($"5^3 = {calc.Power(5, -3)}");
-            Console.WriteLine($"10/2 = {calc.Divide(10, 0)}");
+            //Console.WriteLine($"10/2 = {calc.Divide(10, 0)}");
         }
     }
 }

@@ -25,12 +25,22 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(7));
         }
+        public void AddZeroTest()
+        {
+            double result = uut.Add(5, 0);
+            Assert.That(result,Is.EqualTo(5));
+        }
+
+        public void AddMinusTest()
+        {
+            double result = uut.Add(5, -7);
+            Assert.That(result, Is.EqualTo(-2));
+        }
+
 
         [Test]
         public void SubtractionTest()
         {
-            //Arrange
-            //var uut = new CalculatorClass();
             //Act
             double result = uut.Subtract(10, 5);
             //Assert
@@ -38,10 +48,45 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void SubtractionZeroTest()
+        {
+            //Act
+            double result = uut.Subtract(10, 0);
+            //Assert
+            Assert.That(result, Is.EqualTo(10));
+        }
+
+        [Test]
+        public void SubtractionMinusTest()
+        {
+            //Act
+            double result = uut.Subtract(20, -5);
+            //Assert
+            Assert.That(result, Is.EqualTo(25));
+        }
+
+
+        [Test]
         public void MultiplyTest()
         {
             double result = uut.Multiply(8, 5);
             Assert.That(result, Is.EqualTo(40));
+        }
+
+        [Test]
+        public void DivideByZeroTest()
+        {
+            //Act + Assert
+            Assert.That(() => uut.Divide(10, 0), Throws.TypeOf<System.DivideByZeroException>());
+        }
+
+        [Test]
+        public void DivideMinusTest()
+        {
+            //Act
+            double result = uut.Divide(20, -5);
+            //Assert
+            Assert.That(result, Is.EqualTo(-4));
         }
 
         [Test]
@@ -75,6 +120,28 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(125));
         }
+        public void PowerZeroFirstTest()
+        {
+            double result = uut.Power(0, 5);
+            Assert.That(result, Is.EqualTo(0));
+        }
+        public void PowerZeroSecondTest()
+        {
+            double result = uut.Power(5, 0);
+            Assert.That(result, Is.EqualTo(1));
+        }
+        public void PowerMinusFirstTest()
+        {
+            double result = uut.Power(-2, 5);
+            Assert.That(result, Is.EqualTo(32));
+        }
+        public void PowerMinusSecondTest()
+        {
+            double result = uut.Power(5, -2);
+            Assert.That(result, Is.EqualTo(0.04));
+        }
+
+
 
     }
 }

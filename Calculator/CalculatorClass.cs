@@ -72,15 +72,12 @@ namespace Calculator
 
         public double Divide(double divisor)
         {
-            try
+            if (divisor == 0)
             {
-                return Accumulator /= divisor;
+                throw new DivideByZeroException("Error: 'Divide by zero'");
             }
-            catch(DivideByZeroException)
-            {
-                Console.WriteLine("Could not divide by zero");
-                return 0;
-            }
+
+            return Accumulator /= divisor;
         }
 
         public double Power(double exponent)

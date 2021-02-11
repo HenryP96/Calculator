@@ -40,44 +40,28 @@ namespace Calculator.Unit.Test
         [Test]
         public void MultiplyTest()
         {
-            //Arrange
-            //var uut = new CalculatorClass();
-            //Act
             double result = uut.Multiply(8, 5);
-            //Assert
             Assert.That(result, Is.EqualTo(40));
         }
 
         [Test]
         public void MultiplyZeroTest()
         {
-            //Arrange
-            //var uut = new CalculatorClass();
-            //Act
             double result = uut.Multiply(8, 0);
-            //Assert
             Assert.That(result, Is.EqualTo(0));
         }
 
         [Test]
         public void MultiplyMinusFirstTest()
         {
-            //Arrange
-            //var uut = new CalculatorClass();
-            //Act
             double result = uut.Multiply(8, -5);
-            //Assert
             Assert.That(result, Is.EqualTo(-40));
         }
 
         [Test]
         public void MultiplyMinusSecondTest()
         {
-            //Arrange
-            //var uut = new CalculatorClass();
-            //Act
             double result = uut.Multiply(-5, -5);
-            //Assert
             Assert.That(result, Is.EqualTo(25));
         }
 

@@ -31,12 +31,6 @@ namespace Calculator
             return Math.Pow(a, b);
         }
 
-        public void print()
-        {
-            Console.WriteLine("Den danske ");
-            Console.WriteLine("JS");
-        }
-
         public double Divide(double dividend, double divisor)
         {
             return dividend/divisor;

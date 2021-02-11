@@ -183,6 +183,15 @@ namespace Calculator.Unit.Test
         }
 
         [Test]
+        public void ClearTest()
+        {
+            uut.Add(20, 5);
+            Assert.That(uut.Accumulator, Is.EqualTo(25));
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
         public void OverloadedAddTest()
         {
             double result = uut.Add(2);
@@ -218,16 +227,6 @@ namespace Calculator.Unit.Test
         {
             double result = uut.Add(-7);
             Assert.That(result, Is.EqualTo(-7));
-        }
-
-
-        [Test]
-        public void ClearTest()
-        {
-            uut.Add(20, 5);
-            Assert.That(uut.Accumulator, Is.EqualTo(25));
-            uut.Clear();
-            Assert.That(uut.Accumulator, Is.EqualTo(0));
         }
     }
 }

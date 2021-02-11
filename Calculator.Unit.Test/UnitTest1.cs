@@ -214,39 +214,132 @@ namespace Calculator.Unit.Test
         [Test]
         public void OverloadedAddTest()
         {
+            //Arrange
+            uut.Add(10);
+            //Act
             double result = uut.Add(2);
-            Assert.That(result, Is.EqualTo(2));
+            //Assert
+            Assert.That(result, Is.EqualTo(12));
         }
         [Test]
         public void OverloadedAddZeroTest()
         {
-            double result = uut.Add(5);
-            Assert.That(result, Is.EqualTo(5));
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Add(0);
+            //Assert
+            Assert.That(result, Is.EqualTo(10));
         }
         [Test]
         public void OverloadedAddMinusTest()
         {
+            //Arrange
+            uut.Add(10);
+            //Act
             double result = uut.Add(-7);
-            Assert.That(result, Is.EqualTo(-7));
+            //Assert
+            Assert.That(result, Is.EqualTo(3));
         }
 
         [Test]
         public void OverloadedSubtractTest()
         {
+            //Arrange
+            uut.Add(10);
+            //Act
             double result = uut.Subtract(2);
-            Assert.That(result, Is.EqualTo(2));
+            //Assert
+            Assert.That(result, Is.EqualTo(8));
         }
         [Test]
         public void OverloadedSubtractZeroTest()
         {
-            double result = uut.Add(5);
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Subtract(5);
+            //Assert
             Assert.That(result, Is.EqualTo(5));
         }
         [Test]
         public void OverloadedSubtractMinusTest()
         {
-            double result = uut.Add(-7);
-            Assert.That(result, Is.EqualTo(-7));
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Subtract(-7);
+            //Assert
+            Assert.That(result, Is.EqualTo(17));
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [Test]
+        public void OverloadedPowerTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Power(2);
+            //Assert
+            Assert.That(result, Is.EqualTo(100));
+        }
+        [Test]
+        public void OverloadedPowerZeroTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Power(0);
+            //Assert
+            Assert.That(result, Is.EqualTo(1));
+        }
+        [Test]
+        public void OverloadedPowerMinusTest()
+        {
+            //Arange
+            uut.Add(10);
+            //Act
+            double result = uut.Power(-2);
+            //Assert
+            Assert.That(result, Is.EqualTo(0.01));
         }
     }
 }

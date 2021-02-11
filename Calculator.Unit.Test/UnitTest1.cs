@@ -341,5 +341,35 @@ namespace Calculator.Unit.Test
             //Assert
             Assert.That(result, Is.EqualTo(0.01));
         }
+
+        [Test]
+        public void OverloadedMultiplyTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Multiply(4);
+            //Assert
+            Assert.That(result, Is.EqualTo(40));
+        }
+        [Test]
+        public void OverloadedMultiplyZeroTest()
+        {
+            //Act
+            double result = uut.Multiply(8);
+            //Assert
+            Assert.That(result, Is.EqualTo(0));
+        }
+        [Test]
+        public void OverloadedMultiplyMinusFirstTest()
+        {
+            //Arrange
+            uut.Add(10);
+            //Act
+            double result = uut.Multiply(-8);
+            //Assert
+            Assert.That(result, Is.EqualTo(-80));
+        }
+
     }
 }

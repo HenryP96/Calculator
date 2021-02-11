@@ -156,29 +156,67 @@ namespace Calculator.Unit.Test
         [Test]
         public void AccumulatorSubtractTest()
         {
-            double result = uut.Add(20, 5);
+            double result = uut.Subtract(20, 5);
             Assert.That(result, Is.EqualTo(uut.Accumulator));
         }
 
         [Test]
         public void AccumulatorMultiplyTest()
         {
-            double result = uut.Add(5, 5);
+            double result = uut.Multiply(5, 5);
             Assert.That(result, Is.EqualTo(uut.Accumulator));
         }
 
         [Test]
         public void AccumulatorPowerTest()
         {
-            double result = uut.Add(5, 5);
+            double result = uut.Power(5, 5);
             Assert.That(result, Is.EqualTo(uut.Accumulator));
         }
 
         [Test]
         public void AccumulatorDivideTest()
         {
-            double result = uut.Add(20, 5);
+            double result = uut.Divide(20, 5);
             Assert.That(result, Is.EqualTo(uut.Accumulator));
+        }
+
+        [Test]
+        public void OverloadedAddTest()
+        {
+            double result = uut.Add(2);
+            Assert.That(result, Is.EqualTo(2));
+        }
+        [Test]
+        public void OverloadedAddZeroTest()
+        {
+            double result = uut.Add(5);
+            Assert.That(result, Is.EqualTo(5));
+        }
+        [Test]
+        public void OverloadedAddMinusTest()
+        {
+            double result = uut.Add(-7);
+            Assert.That(result, Is.EqualTo(-7));
+        }
+
+        [Test]
+        public void OverloadedSubtractTest()
+        {
+            double result = uut.Subtract(2);
+            Assert.That(result, Is.EqualTo(2));
+        }
+        [Test]
+        public void OverloadedSubtractZeroTest()
+        {
+            double result = uut.Add(5);
+            Assert.That(result, Is.EqualTo(5));
+        }
+        [Test]
+        public void OverloadedSubtractMinusTest()
+        {
+            double result = uut.Add(-7);
+            Assert.That(result, Is.EqualTo(-7));
         }
 
     }
